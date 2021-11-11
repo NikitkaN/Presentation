@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Mohave:wght@300&display=swap');
+@keyframes neon-2 {
+	from {
+		box-shadow: 0 0 5px red,
+		0 0 10px red,
+		0 0 15px red,
+		0 0 20px red;
+	}
+	to {
+		box-shadow: 0 0 20px red,
+		0 0 35px red,
+		0 0 40px red,
+		0 0 50px red,
+		0 0 800px red;
+	}
+}
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inconsolata', monospace;
+    font-size: 115px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    color: gold;
+}
+.container {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 660px;
+    grid-template-rows: 418px;
+
+    justify-content: center;
+    align-content: center;
+}
+.container .box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    border-radius: 25px;
+    animation: 2s neon-2 alternate-reverse infinite;
+    cursor: pointer;
+    background-image: url(IMG/KNNm.gif);
+}
+.slider{
+    max-width: 80%;
+    /*max-height: 0%;*/
+    display: grid;
+    height: 100vh;
+    align-content: center;
+    margin: auto;
+}
+.one {
+    max-width: 50%;
+}
+.two {
+    max-width: 80%;
+}
+p {
+    text-align: center;
+}
+.slider .item img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    /*border-radius: 25px*/;
+}
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    color: red;
+    font-weight: bold;
+    font-size: 100px;
+    transition: 0.3s linear;
+    height: 100px;
+    padding: 0px 50px 0px 50px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.next {
+    right: 0;
+}
+.previous:hover,
+.next:hover {
+    text-shadow: 0 0 50px red;
+}
+.slider .item {
+    animation-name: fade;
+    animation-duration: 4s;
+}
