@@ -28,12 +28,12 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Inconsolata', monospace;
-    font-size: 115px;
+    /*font-family: 'Inconsolata', monospace;*/
+    font-size: 180px;
     width: 100%;
     min-height: 100vh;
     background-color: #121212;
-    color: gold;
+    color: red;
 }
 .container {
     display: grid;
@@ -48,8 +48,9 @@ body {
 .container .box {
     display: grid;
     align-items: center;
-    justify-items: center;
+    /*justify-items: center;*/
     text-align: center;
+    padding: 0px 0px 0px 25px;
     border-radius: 25px;
     animation: 2s neon-2 alternate-reverse infinite;
     cursor: pointer;
@@ -71,6 +72,12 @@ body {
 }
 p {
     text-align: center;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+}
+p:hover {
+    opacity: 0.8;
 }
 .slider .item img {
     object-fit: fill;
